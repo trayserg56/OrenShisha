@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<!-- <div class="links">
+		<a href="shop.html">сюда</a>
+	</div> -->
+	<div class="logo-fixedblock">
+		<img src="img/logo.png" alt="#">
+	</div>
+	<div class="menu-fixedblock">
+		<div class="menu-fixedblock__top-block">
+			<a href="#" class="menu-fixedblock__top-block_block menu-fixedblock__top-block_block_burger">
+				<img src="img/burger.png" alt="#" class="menu-fixedblock__top-block_img">
+			</a>
+		</div>
+		<div class="menu-fixedblock__bottom-block">
+			<a href="#" class="menu-fixedblock__bottom-block_block menu-fixedblock__bottom-block_block_basket">
+				<img src="img/basket.png" alt="#" class="menu-fixedblock__bottom-block_img">
+			</a>
+		</div>
+	</div>
+    
+    <div class="CigaretsBlock">
+            <div class="CigaretsBlock__items">
+                <div class="CigaretsBlock__items__item CigaretsBlock__items__item1">
+                    <div class="CigaretsBlock__items__item__offer">
+                        <p class="CigaretsBlock__items__item__offer_offer"><span>Кальян</span><br>или сигареты?</p>
+                    </div>
+                    <div class="CigaretsBlock__items__item__disc">
+                        <p class="CigaretsBlock__items__item__disc_disc">По заявлению Всемирной организации здравоохранения, кальян не является безвредной альтернативой сигаретам. Вдыхаемый дым содержит токсические вещества, приводящие к раку легких, заболеваниям сердца, и другим заболеваниям.</p>
+                        <p class="CigaretsBlock__items__item__disc_disc">Однако большинство популярных представлений о вреде кальяна являются мифами. К примеру,	«за один час курения кальяна человек вдыхает в 100—200 раз больше дыма, чем при выкуривании одной сигареты». </p>
+                    </div>
+                </div>
+                <div class="CigaretsBlock__items__item CigaretsBlock__items__item2"></div>
+            </div>
+    </div>
+
+	<div class="footer">
+			<div class="footer__items">
+				<div class="footer__items__item__left-item">
+					<a href="#" class="footer__items__item__left-item_a">Тел. 27-71-45</a>
+				</div>
+				<div id="dots"></div>
+				<div class="footer__items__item__right-item">
+					<p class="footer__items__item__right-item_p">Пользуясь сайтом, Вы подтверждаете,<br>
+						что достигли совершеннолетия.</p>
+				</div>
+			</div>
+	</div>
+	<div class="footer-fixedblock">
+		<a href="#" class="footer-fixedblock__a">
+			<img src="img/sales.png" alt="#" class="footer-fixedblock_img">
+			<p>Акции</p>
+		</a>
+	</div>
+	<div class="advancingMenu none">
+		<div class="advancingMenu__img">
+			<img src="img/close.png" alt="#" class="advancingMenu__img_img">
+		</div>
+		<div class="advancingMenu__menu">
+			<ul class="advancingMenu__menu__ul menu">
+				<li><a href="#" class="advancingMenu__menu__ul__li_a">Главная</a></li>
+				<li><a href="arenda.html" class="advancingMenu__menu__ul__li_a">Условия аренды</a></li>
+				<li><a href="tastes.html" class="advancingMenu__menu__ul__li_a">Наши вкусы</a></li>
+				<li><a href="keitering.html" class="advancingMenu__menu__ul__li_a">Кейтеринг</a></li>
+				<li><a href="komplektacia.html" class="advancingMenu__menu__ul__li_a">Комплект</a></li>
+				<li><a href="shop.html" class="advancingMenu__menu__ul__li_a">Магазин</a></li>
+				<li><a href="#" class="advancingMenu__menu__ul__li_a li-icon">Полезная<span>информация</span></a>
+					<ul class="submenu">
+						<li><a href="shishaorcigareta.html">Кальян и сигареты</a></li>
+						<li><a href="#">Выбор кальяна</a></li>
+					</ul></li>
+				<li><a href="akzii.html" class="advancingMenu__menu__ul__li_a border-none">Акции</a></li>
+			</ul>
+			</div>
+	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="slick/slick.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		$('#multiple-items1').slick({
+		// prevArrow: '<div class="ArrowPrev"></div>',
+		// nextArrow: '<div class="ArrowNext"></div>',
+		appendArrows: $('.offers__top-items__right_item1'),
+		appendDots: $('#dots'),
+		// dotsClass: $('.dot'),
+		dots: true,
+		infinite: true,
+		slidesToShow: 1,
+		speed: 700,
+		focusOnSelect: true,
+		// autoplay: true,
+		// verticalSwiping: true,
+		slidesToScroll: 1
+		});
+		});
+		</script>
+	<script>
+	$(".menu-fixedblock__top-block_block_burger").click(function(){
+  		$(".menu-fixedblock__top-block_block_burger").addClass("none");
+		$(".menu-fixedblock__bottom-block_block_basket").addClass("none");
+		$(".advancingMenu").removeClass("none");
+  	});
+  </script>
+  <script>
+	$(".advancingMenu__img_img").click(function(){
+		$(".advancingMenu").addClass("none");
+  		$(".menu-fixedblock__top-block_block_burger").removeClass("none");
+		$(".menu-fixedblock__bottom-block_block_basket").removeClass("none");
+		
+  	});
+  </script>
+</body>
+</html>
